@@ -24,7 +24,7 @@ birthdays = os.environ["BIRTHDAY"].split(',')
 
 # 获取天气和温度
 def get_weather(city):
-    url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
+    url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=130600" + city
     res = requests.get(url).json()
     weather = res['data']['list'][0]
     return weather['weather'], math.floor(weather['temp'])
